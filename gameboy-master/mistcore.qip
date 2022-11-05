@@ -1,0 +1,34 @@
+# use following format when adding mist core project files
+#set_global_assignment -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) mist/sdram.sv]
+#set_global_assignment -name QIP_FILE [file join $::quartus(qip_path) mist/pll.qip]
+#
+# fill it in with the original Mist project files found in .qsf file
+# remember to comment out the pll file (and possibly sdram controller)
+#
+#
+set_global_assignment -name VERILOG_FILE [file join $::quartus(qip_path) gb_mist.v]
+#set_global_assignment -name VERILOG_FILE [file join $::quartus(qip_path) sigma_delta_dac.v]
+set_global_assignment -name VHDL_FILE [file join $::quartus(qip_path) dac.vhd]
+set_global_assignment -name VERILOG_FILE [file join $::quartus(qip_path) data_io.v]
+set_global_assignment -name VERILOG_FILE [file join $::quartus(qip_path) user_io.v]
+set_global_assignment -name VERILOG_FILE [file join $::quartus(qip_path) osd.v]
+set_global_assignment -name VERILOG_FILE [file join $::quartus(qip_path) lcd.v]
+set_global_assignment -name VHDL_FILE [file join $::quartus(qip_path) spram.vhd]
+set_global_assignment -name VHDL_FILE [file join $::quartus(qip_path) dpram.vhd]
+set_global_assignment -name VHDL_FILE [file join $::quartus(qip_path) gbc_snd.vhd]
+set_global_assignment -name VERILOG_FILE [file join $::quartus(qip_path) gb.v]
+set_global_assignment -name VERILOG_FILE [file join $::quartus(qip_path) video.v]
+set_global_assignment -name VERILOG_FILE [file join $::quartus(qip_path) hdma.v]
+set_global_assignment -name VERILOG_FILE [file join $::quartus(qip_path) sprites.v]
+set_global_assignment -name VERILOG_FILE [file join $::quartus(qip_path) timer.v]
+set_global_assignment -name VERILOG_FILE [file join $::quartus(qip_path) link.v]
+set_global_assignment -name VHDL_FILE [file join $::quartus(qip_path) boot_rom.vhd]
+set_global_assignment -name QIP_FILE [file join $::quartus(qip_path) gbc_bios.qip]
+set_global_assignment -name QIP_FILE [file join $::quartus(qip_path) T80/T80.qip]
+set_global_assignment -name SDC_FILE [file join $::quartus(qip_path) gb.sdc]
+
+#set_global_assignment -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) sdram.sv]
+#set_global_assignment -name QIP_FILE pll.qip
+
+
+
