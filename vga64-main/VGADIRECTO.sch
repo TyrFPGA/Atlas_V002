@@ -1,0 +1,348 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Connector:HDMI_A_1.4 J1
+U 1 1 6177BC0A
+P 3500 2650
+F 0 "J1" H 3930 2696 50  0000 L CNN
+F 1 "HDMI_A_1.4" H 3930 2605 50  0000 L CNN
+F 2 "3D:Amphenol_ICC-10029449-111RLF-MFG" H 3525 2650 50  0001 C CNN
+F 3 "https://en.wikipedia.org/wiki/HDMI" H 3525 2650 50  0001 C CNN
+	1    3500 2650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:DB15_Female_HighDensity J2
+U 1 1 6177C62C
+P 8400 2750
+F 0 "J2" H 8400 3617 50  0000 C CNN
+F 1 "DB15_Female_HighDensity" H 8400 3526 50  0000 C CNN
+F 2 "Connector_Dsub:DSUB-15-HD_Female_Horizontal_P2.29x1.98mm_EdgePinOffset3.03mm_Housed_MountingHolesOffset4.94mm" H 7450 3150 50  0001 C CNN
+F 3 " ~" H 7450 3150 50  0001 C CNN
+	1    8400 2750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 61781833
+P 5400 1900
+F 0 "R2" H 5470 1946 50  0000 L CNN
+F 1 "240" H 5470 1855 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 5330 1900 50  0001 C CNN
+F 3 "~" H 5400 1900 50  0001 C CNN
+	1    5400 1900
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R3
+U 1 1 61781C7D
+P 5400 2000
+F 0 "R3" H 5470 2046 50  0000 L CNN
+F 1 "820" H 5470 1955 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 5330 2000 50  0001 C CNN
+F 3 "~" H 5400 2000 50  0001 C CNN
+	1    5400 2000
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R4
+U 1 1 6178D9E5
+P 5400 2500
+F 0 "R4" H 5470 2546 50  0000 L CNN
+F 1 "240" H 5470 2455 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 5330 2500 50  0001 C CNN
+F 3 "~" H 5400 2500 50  0001 C CNN
+	1    5400 2500
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R5
+U 1 1 6178D9EB
+P 5400 2600
+F 0 "R5" H 5470 2646 50  0000 L CNN
+F 1 "820" H 5470 2555 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 5330 2600 50  0001 C CNN
+F 3 "~" H 5400 2600 50  0001 C CNN
+	1    5400 2600
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R6
+U 1 1 6178EA39
+P 5400 3100
+F 0 "R6" H 5470 3146 50  0000 L CNN
+F 1 "240" H 5470 3055 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 5330 3100 50  0001 C CNN
+F 3 "~" H 5400 3100 50  0001 C CNN
+	1    5400 3100
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R7
+U 1 1 6178EA3F
+P 5400 3200
+F 0 "R7" H 5470 3246 50  0000 L CNN
+F 1 "820" H 5470 3155 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 5330 3200 50  0001 C CNN
+F 3 "~" H 5400 3200 50  0001 C CNN
+	1    5400 3200
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3700 3750 3700 3950
+Wire Wire Line
+	3700 3950 3800 3950
+Wire Wire Line
+	3800 3950 3800 3750
+$Comp
+L power:GND #PWR0101
+U 1 1 617948F3
+P 3800 4050
+F 0 "#PWR0101" H 3800 3800 50  0001 C CNN
+F 1 "GND" H 3805 3877 50  0000 C CNN
+F 2 "" H 3800 4050 50  0001 C CNN
+F 3 "" H 3800 4050 50  0001 C CNN
+	1    3800 4050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3800 3950 3800 4050
+Connection ~ 3800 3950
+$Comp
+L power:+5V #PWR0102
+U 1 1 617957A3
+P 3500 1250
+F 0 "#PWR0102" H 3500 1100 50  0001 C CNN
+F 1 "+5V" H 3515 1423 50  0000 C CNN
+F 2 "" H 3500 1250 50  0001 C CNN
+F 3 "" H 3500 1250 50  0001 C CNN
+	1    3500 1250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3500 1250 3500 1550
+Text GLabel 2500 2550 0    50   Input ~ 0
+VGA222_HS
+Text GLabel 2500 2450 0    50   Input ~ 0
+VGA222_VS
+Text GLabel 2500 2350 0    50   Input ~ 0
+VGA222_B0
+Text GLabel 2500 2250 0    50   Input ~ 0
+VGA222_B1
+Text GLabel 2500 2150 0    50   Input ~ 0
+VGA222_G0
+Text GLabel 2500 2050 0    50   Input ~ 0
+VGA222_G1
+Text GLabel 2500 1950 0    50   Input ~ 0
+VGA222_R0
+Text GLabel 2500 1850 0    50   Input ~ 0
+VGA222_R1
+Wire Wire Line
+	2500 1850 3100 1850
+Wire Wire Line
+	2500 1950 3100 1950
+Wire Wire Line
+	3100 2050 2500 2050
+Wire Wire Line
+	2500 2150 3100 2150
+Wire Wire Line
+	3100 2250 2500 2250
+Wire Wire Line
+	2500 2350 3100 2350
+Wire Wire Line
+	3100 2450 2500 2450
+Wire Wire Line
+	3100 2550 2500 2550
+Text GLabel 8900 2750 2    50   Input ~ 0
+VGA222_HS
+Text GLabel 8900 2950 2    50   Input ~ 0
+VGA222_VS
+Text GLabel 4950 3200 0    50   Input ~ 0
+VGA222_B0
+Text GLabel 4950 3100 0    50   Input ~ 0
+VGA222_B1
+Text GLabel 4950 2600 0    50   Input ~ 0
+VGA222_G0
+Text GLabel 4950 2500 0    50   Input ~ 0
+VGA222_G1
+Text GLabel 4900 2000 0    50   Input ~ 0
+VGA222_R0
+Text GLabel 4900 1900 0    50   Input ~ 0
+VGA222_R1
+Wire Wire Line
+	4900 1900 5250 1900
+Wire Wire Line
+	4900 2000 5250 2000
+Wire Wire Line
+	5250 2500 4950 2500
+Wire Wire Line
+	4950 2600 5250 2600
+Wire Wire Line
+	5250 3100 4950 3100
+Wire Wire Line
+	4950 3200 5250 3200
+Wire Wire Line
+	5550 2000 6000 2000
+Wire Wire Line
+	6000 2000 6000 1950
+Wire Wire Line
+	6000 1900 5550 1900
+Wire Wire Line
+	5550 2500 6000 2500
+Wire Wire Line
+	6000 2500 6000 2550
+Wire Wire Line
+	6000 2600 5550 2600
+Wire Wire Line
+	5550 3100 6000 3100
+Wire Wire Line
+	6000 3100 6000 3150
+Wire Wire Line
+	6000 3200 5550 3200
+Text GLabel 6250 1950 2    50   Input ~ 0
+VGAR
+Text GLabel 6250 2550 2    50   Input ~ 0
+VGAG
+Text GLabel 6250 3150 2    50   Input ~ 0
+VGAB
+Wire Wire Line
+	6250 1950 6000 1950
+Connection ~ 6000 1950
+Wire Wire Line
+	6000 1950 6000 1900
+Wire Wire Line
+	6250 2550 6000 2550
+Connection ~ 6000 2550
+Wire Wire Line
+	6000 2550 6000 2600
+Wire Wire Line
+	6250 3150 6000 3150
+Connection ~ 6000 3150
+Wire Wire Line
+	6000 3150 6000 3200
+$Comp
+L power:+5V #PWR0103
+U 1 1 617D164E
+P 7450 2850
+F 0 "#PWR0103" H 7450 2700 50  0001 C CNN
+F 1 "+5V" H 7465 3023 50  0000 C CNN
+F 2 "" H 7450 2850 50  0001 C CNN
+F 3 "" H 7450 2850 50  0001 C CNN
+	1    7450 2850
+	1    0    0    -1  
+$EndComp
+Text GLabel 7850 2350 0    50   Input ~ 0
+VGAR
+Text GLabel 7850 2550 0    50   Input ~ 0
+VGAG
+Text GLabel 7850 2750 0    50   Input ~ 0
+VGAB
+Wire Wire Line
+	7850 2350 8100 2350
+Wire Wire Line
+	8100 2550 7850 2550
+Wire Wire Line
+	7850 2750 8100 2750
+Wire Wire Line
+	7450 2850 8100 2850
+Wire Wire Line
+	7950 2250 8100 2250
+Wire Wire Line
+	8100 2450 7950 2450
+Wire Wire Line
+	8100 2650 7950 2650
+Wire Wire Line
+	8100 3150 7950 3150
+Wire Wire Line
+	7950 2250 7950 2450
+Wire Wire Line
+	7950 2450 7950 2650
+Connection ~ 7950 2450
+Wire Wire Line
+	7950 2650 7950 3050
+Connection ~ 7950 2650
+Wire Wire Line
+	7950 3150 7950 3500
+Connection ~ 7950 3150
+$Comp
+L power:GND #PWR0104
+U 1 1 617FA341
+P 7950 3500
+F 0 "#PWR0104" H 7950 3250 50  0001 C CNN
+F 1 "GND" H 7955 3327 50  0000 C CNN
+F 2 "" H 7950 3500 50  0001 C CNN
+F 3 "" H 7950 3500 50  0001 C CNN
+	1    7950 3500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8900 2750 8700 2750
+Wire Wire Line
+	8700 2950 8900 2950
+Wire Wire Line
+	8100 3050 7950 3050
+Connection ~ 7950 3050
+Wire Wire Line
+	7950 3050 7950 3150
+NoConn ~ 8100 2950
+NoConn ~ 8700 3150
+NoConn ~ 8700 2550
+NoConn ~ 8700 2350
+$Comp
+L Device:R R1
+U 1 1 6182F0BD
+P 2950 3550
+F 0 "R1" H 3020 3596 50  0000 L CNN
+F 1 "1k" H 3020 3505 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 2880 3550 50  0001 C CNN
+F 3 "~" H 2950 3550 50  0001 C CNN
+	1    2950 3550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3100 3350 2950 3350
+Wire Wire Line
+	2950 3350 2950 3400
+Wire Wire Line
+	2950 3700 2950 3950
+Wire Wire Line
+	2950 3950 3300 3950
+Connection ~ 3700 3950
+Wire Wire Line
+	3600 3950 3600 3750
+Connection ~ 3600 3950
+Wire Wire Line
+	3600 3950 3700 3950
+Wire Wire Line
+	3500 3750 3500 3950
+Connection ~ 3500 3950
+Wire Wire Line
+	3500 3950 3600 3950
+Wire Wire Line
+	3400 3750 3400 3950
+Connection ~ 3400 3950
+Wire Wire Line
+	3400 3950 3500 3950
+Wire Wire Line
+	3300 3750 3300 3950
+Connection ~ 3300 3950
+Wire Wire Line
+	3300 3950 3400 3950
+NoConn ~ 3100 2750
+NoConn ~ 3100 2950
+NoConn ~ 3100 3050
+NoConn ~ 3100 3250
+$EndSCHEMATC

@@ -1,0 +1,147 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 2018  Intel Corporation. All rights reserved.
+# Your use of Intel Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Intel Program License 
+# Subscription Agreement, the Intel Quartus Prime License Agreement,
+# the Intel FPGA IP License Agreement, or other applicable license
+# agreement, including, without limitation, that your use is for
+# the sole purpose of programming logic devices manufactured by
+# Intel and sold by Intel or its authorized distributors.  Please
+# refer to the applicable agreement for further details.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus Prime
+# Version 18.0.0 Build 614 04/24/2018 SJ Standard Edition
+# Date created = 08:58:44  November 04, 2020
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		terminal_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Altera recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus Prime software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+set_global_assignment -name FAMILY "Cyclone 10 LP"
+set_global_assignment -name DEVICE 10CL025YU256C8G
+set_global_assignment -name TOP_LEVEL_ENTITY terminal
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 18.0.0
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "08:58:44  NOVEMBER 04, 2020"
+set_global_assignment -name LAST_QUARTUS_VERSION "17.1.0 Lite Edition"
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 1
+set_global_assignment -name ENABLE_OCT_DONE OFF
+set_global_assignment -name ENABLE_CONFIGURATION_PINS OFF
+set_global_assignment -name ENABLE_BOOT_SEL_PIN OFF
+set_global_assignment -name USE_CONFIGURATION_DEVICE OFF
+set_global_assignment -name CRC_ERROR_OPEN_DRAIN OFF
+
+set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "3.3-V LVTTL"
+set_global_assignment -name CYCLONEII_RESERVE_NCEO_AFTER_CONFIGURATION "USE AS REGULAR IO"
+set_global_assignment -name OUTPUT_IO_TIMING_NEAR_END_VMEAS "HALF VCCIO" -rise
+set_global_assignment -name OUTPUT_IO_TIMING_NEAR_END_VMEAS "HALF VCCIO" -fall
+set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF SIGNAL SWING" -rise
+set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF SIGNAL SWING" -fall
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_global_assignment -name SMART_RECOMPILE ON
+set_global_assignment -name STRATIXV_CONFIGURATION_SCHEME "PASSIVE SERIAL"
+set_global_assignment -name CYCLONEIII_CONFIGURATION_DEVICE EPCQ16
+set_global_assignment -name NUM_PARALLEL_PROCESSORS ALL
+
+set_global_assignment -name GENERATE_RBF_FILE ON
+set_global_assignment -name GENERATE_SVF_FILE ON
+set_global_assignment -name ON_CHIP_BITSTREAM_DECOMPRESSION OFF
+
+set_global_assignment -name RESERVE_ALL_UNUSED_PINS_WEAK_PULLUP "AS INPUT TRI-STATED"
+
+set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (Verilog)"
+set_global_assignment -name EDA_TIME_SCALE "1 ps" -section_id eda_simulation
+set_global_assignment -name EDA_OUTPUT_DATA_FORMAT "VERILOG HDL" -section_id eda_simulation
+
+#======================
+
+set_location_assignment PIN_M2 -to clk12
+
+set_location_assignment PIN_N6 -to resetbtn
+
+#set_location_assignment PIN_L16 -to vgah
+#set_location_assignment PIN_L15 -to vgav
+#set_location_assignment PIN_P1 -to vgab[0]
+#set_location_assignment PIN_P2 -to vgab[1]
+#set_location_assignment PIN_J1 -to vgag[0]
+#set_location_assignment PIN_J2 -to vgag[1]
+#set_location_assignment PIN_N1 -to vgar[0]
+#set_location_assignment PIN_N2 -to vgar[1]
+
+set_location_assignment PIN_L16 -to TMDS[0]
+  # CLK-                        ### VGA_HS
+set_location_assignment PIN_L15 -to TMDS[1]
+  # CLK+ # clock channel        ### VGA_VS
+set_location_assignment PIN_P1 -to TMDS[2]
+  # 0-                          ### VGA_B[0]
+set_location_assignment PIN_P2 -to TMDS[3]
+ # 0+   # blue channel         ### VGA_B[1]
+set_location_assignment PIN_J1 -to TMDS[4]
+  # 1-                          ### VGA_G[0]
+set_location_assignment PIN_J2 -to TMDS[5]
+  # 1+   # green channel        ### VGA_G[1]
+set_location_assignment PIN_N1 -to TMDS[6]
+  # 2-                          ### VGA_R[0]
+set_location_assignment PIN_N2 -to TMDS[7]
+  # 2+   # red channel          ### VGA_R[1]
+
+set_location_assignment PIN_L2 -to ps2_clk
+set_location_assignment PIN_K2 -to ps2_data
+
+set_location_assignment PIN_T12 -to buzzer
+
+set_location_assignment PIN_D16 -to uart_rx
+set_location_assignment PIN_D15 -to uart_tx
+
+#======================
+
+set_global_assignment -name VERILOG_FILE terminal.v
+set_global_assignment -name SDC_FILE terminal.sdc
+
+set_global_assignment -name VERILOG_FILE "vt52-hdl/vtvic.v"
+set_global_assignment -name VERILOG_FILE "vt52-hdl/vtuart.v"
+set_global_assignment -name VERILOG_FILE "vt52-hdl/vtreset.v"
+set_global_assignment -name VERILOG_FILE "vt52-hdl/vtram.v"
+set_global_assignment -name QIP_FILE "vt52-hdl/vtmem.qip"
+set_global_assignment -name VERILOG_FILE "vt52-hdl/vt52.v"
+set_global_assignment -name VERILOG_FILE "vt52-hdl/vregs.v"
+set_global_assignment -name VERILOG_FILE "vt52-hdl/vm2_wb.v"
+set_global_assignment -name VERILOG_FILE "vt52-hdl/vm2_plm.v"
+set_global_assignment -name VERILOG_FILE "vt52-hdl/vga.v"
+set_global_assignment -name VERILOG_FILE "vt52-hdl/ps2.v"
+set_global_assignment -name QIP_FILE "vt52-hdl/fontrom.qip"
+set_global_assignment -name QIP_FILE "vt52-hdl/pll.qip"
+
+set_global_assignment -name QIP_FILE hdmi1/hdmi1.qip
+
+#=======================
+
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+
+
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
