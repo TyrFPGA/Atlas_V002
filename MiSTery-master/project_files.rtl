@@ -1,0 +1,19 @@
+# files inherited from the guest core:
+mistery_top.sv
+mist/sigma_delta_dac.v
+mist/mist.qip
+mist/data_io.v
+mist/vidclkcntrl.qip
+atarist/atarist.qip
+
+MiSTery.sdc
+
+# The controller module
+DeMiSTify/controller/controller.qip
+demistify_config_pkg.vhd
+
+# Firmware with customisations
+firmware/controller_rom1_byte.vhd
+firmware/controller_rom2_byte.vhd
+
+

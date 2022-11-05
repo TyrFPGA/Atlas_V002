@@ -1,0 +1,17 @@
+out/
+db/
+incremental_db/
+greybox_tmp
+PLLJ_PLLSPE_INFO.txt
+history.db
+*.qdf
+*.qws
+*.bak
+*.jdi
+*.sof
+*.done
+*.pin
+*.rpt
+*.smsg
+*.summary
+upd.sh
