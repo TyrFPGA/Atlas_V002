@@ -1,0 +1,5 @@
+(sym_lib_table
+  (lib (name "MCU_RaspberryPi_and_Boards")(type "KiCad")(uri "D:/kicad/nuevo_recolocador_pipico_atlas/huellas/KiCad-RP-Pico-main/RP-Pico Libraries/MCU_RaspberryPi_and_Boards.kicad_sym")(options "")(descr ""))
+  (lib (name "Connector_Generic1")(type "KiCad")(uri "${KIPRJMOD}/Connector_Generic.kicad_sym")(options "")(descr ""))
+  (lib (name "Connector_Generic2")(type "KiCad")(uri "${KIPRJMOD}/Connector_Generic.kicad_sym")(options "")(descr ""))
+)

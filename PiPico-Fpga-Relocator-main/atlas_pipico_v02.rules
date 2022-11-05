@@ -1,0 +1,81 @@
+
+(rules PCB atlas_pipico_v02
+  (snap_angle 
+    fortyfive_degree
+  )
+  (autoroute_settings
+    (fanout off)
+    (app.freerouting.autoroute on)
+    (postroute on)
+    (vias on)
+    (via_costs 50)
+    (plane_via_costs 5)
+    (start_ripup_costs 100)
+    (start_pass_no 3)
+    (layer_rule F.Cu
+      (active on)
+      (preferred_direction vertical)
+      (preferred_direction_trace_costs 1.0)
+      (against_preferred_direction_trace_costs 2.0)
+    )
+    (layer_rule B.Cu
+      (active on)
+      (preferred_direction horizontal)
+      (preferred_direction_trace_costs 1.0)
+      (against_preferred_direction_trace_costs 2.0)
+    )
+  )
+  (rule
+    (width 250.0)
+    (clear 200.2)
+    (clear 125.0 (type smd_to_turn_gap))
+    (clear 50.0 (type smd_smd))
+  )
+  (padstack "Via[0-1]_800:400_um"
+    (shape
+      (circle F.Cu 800.0 0.0 0.0)
+    )
+    (shape
+      (circle B.Cu 800.0 0.0 0.0)
+    )
+    (attach off)
+  )
+  (via 
+    "Via[0-1]_800:400_um" "Via[0-1]_800:400_um" default
+  )
+  (via 
+    "Via[0-1]_800:400_um-kicad_default" "Via[0-1]_800:400_um" "kicad_default"
+  )
+  (via_rule
+    default "Via[0-1]_800:400_um"
+  )
+  (via_rule
+    "kicad_default" "Via[0-1]_800:400_um-kicad_default"
+  )
+  (class default
+    EAR "R12_SD_CS" "T13_SD_CLK" "R13_SD_MISO" "T14_SD_MOSI" "P14_SD_DATA1" "R14_SD_DATA2" "T15_JOY_LEFT"
+    "N16_JOY_RIGHT" "TMDSC_P" "TMDSC_N" "K15_JOY_FIRE1" "K16_JOY_FIRE2" "J14_JOY_UP" "T12_LEFT" GND
+    "R11_RIGHT" +5V VIN +3.3V RESET "R1_JOY_DOWN" "TMDS_0_N" "L2_KCLK"
+    "K2_KDAT" "TMDS_1_P" "TMDS_1_N" "TMDS_0_P" "TMDS_2_N" "TMDS_2_P" "Net-(J5-Pad1)" "Net-(J5-Pad2)"
+    "MOUSE_DAT" "unconnected-(J6-Pad2)" "MOUSE_CLK" "unconnected-(J6-Pad4)" "unconnected-(J8-Pad2)" "unconnected-(J8-Pad4)" "Net-(JP1-Pad1)" "Net-(SW1-Pad1)"
+    "unconnected-(U1-Pad35)" "unconnected-(U1-Pad37)" "unconnected-(U1-Pad41)" "unconnected-(U1-Pad43)"
+    (clearance_class default)
+    (via_rule default)
+    (rule
+      (width 250.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+  (class "kicad_default"
+    (clearance_class "kicad_default")
+    (via_rule kicad_default)
+    (rule
+      (width 250.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+)
